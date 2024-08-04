@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply bg-orange-50;
+  }
+  @media (max-width: 640px) {
+    .custom-break::after {
+      content: "";
+      display: block;
+    }
+  }
