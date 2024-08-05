@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -90,6 +90,45 @@ const Main = () => {
                 </div>
               </>
             )}
+          </div>
+
+          {showContent && (
+            <div className="visibility-item flex flex-wrap -mx-4 -mb-12">
+              {posts.slice(4).map((post) => (
+                <div
+                  className="w-full md:w-1/2 xl:w-1/4 px-4 mb-12 border-r border-gray-100"
+                  key={post.id}
+                >
+                  <Link className="block px-4 group" to={`/blog/${post.id}`}>
+                    <img
+                      className="block w-full h-40 mb-4 object-cover rounded-lg"
+                      src={post.imageUrl}
+                      alt=""
+                    />
+                    <span className="block text-gray-500 mb-2">
+                      {post.date}
+                    </span>
+                    <h4 className="text-xl font-semibold text-gray-900 group-hover:text-orange-900 mb-4">
+                      {post.title}
+                    </h4>
+                    <p className="text-gray-500">
+                      {truncateContent(post.content)}
+                    </p>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
+
+          <div className="text-center">
+            <a
+              onClick={() => setShowContent(!showContent)}
+              className="relative group inline-block py-4 px-7 font-semibold text-orange-900 hover:text-orange-50 rounded-full bg-white transition duration-300 overflow-hidden"
+              href="#"
+            >
+              <div className="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+              <span className="relative">See More Articles</span>
+            </a>
           </div>
         </div>
       </div>
