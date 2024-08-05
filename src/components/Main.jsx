@@ -12,7 +12,23 @@ const truncateContent = (content) => {
 };
 
 const Main = () => {
+  const [posts, setPosts] = useState([]);
   const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    // Fetch posts from the backend
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/posts");
+        setPosts(response.data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
   return <section></section>;
 };
 
