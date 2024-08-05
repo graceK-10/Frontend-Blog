@@ -41,6 +41,56 @@ const Main = () => {
               <span className="custom-break font-serif italic">Chronicles</span>
             </h1>
           </div>
+
+          <div className="flex flex-wrap -mx-4 mb-18">
+            {posts.length > 0 && (
+              <>
+                <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+                  <Link
+                    className="block group w-full"
+                    to={`/blog/${posts[0].id}`}
+                  >
+                    <img
+                      className="block w-full mb-5"
+                      src={posts[0].imageUrl}
+                      alt=""
+                    />
+                    <span className="block text-gray-500 mb-5">
+                      {posts[0].date}
+                    </span>
+                    <h4 className="text-3xl font-semibold text-gray-900 group-hover:text-orange-900 mb-5">
+                      {posts[0].title}
+                    </h4>
+                    <p className="max-w-xl text-lg text-gray-500">
+                      {truncateContent(posts[0].content)}
+                    </p>
+                  </Link>
+                </div>
+                <div className="w-full lg:w-1/2 px-4">
+                  {posts.slice(1, 4).map((post) => (
+                    <Link
+                      className="md:flex group mb-8"
+                      to={`/blog/${post.id}`}
+                      key={post.id}
+                    >
+                      <img className="w-48 h-40" src={post.imageUrl} alt="" />
+                      <div className="mt-4 md:mt-0 md:ml-6 pt-2">
+                        <span className="block text-gray-500 mb-2">
+                          {post.date}
+                        </span>
+                        <h4 className="text-xl font-semibold text-gray-900 group-hover:text-orange-900">
+                          {post.title}
+                        </h4>
+                        <p className="text-gray-500">
+                          {truncateContent(post.content)}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </section>
