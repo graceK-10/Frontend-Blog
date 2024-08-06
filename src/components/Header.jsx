@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <section>
-      <nav className="relative py-6 bg-orange-50 z-50">
+      <nav className="relative py-6 bg-header-pattern bg-cover bg-center z-50">
         <div className="container px-4 mx-auto">
           <div className="flex items-center relative">
             <a className="inline-block text-lg font-bold" href="/">
