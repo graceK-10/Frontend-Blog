@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply bg-orange-50;
+    @apply bg-white;
   }
   @media (max-width: 640px) {
     .custom-break::after {

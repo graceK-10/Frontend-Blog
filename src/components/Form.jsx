@@ -11,7 +11,7 @@ function Form() {
   const [title, setTitle] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [content, setContent] = useState("");
-  const API_URL = "http://localhost:5000/posts";
+  const API_URL = "https://backend-blog-1-n6vo.onrender.com/posts";
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {

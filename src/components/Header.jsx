@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/Lotus.png"; // Adjust the path according to your logo file name and extension
 
 const Header = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -10,12 +11,7 @@ const Header = () => {
         <div className="container px-4 mx-auto">
           <div className="flex items-center relative">
             <a className="inline-block text-lg font-bold" href="/">
-              <img
-                className="h-10"
-                src="saturn-assets/logos/logo-saturn-dark.svg"
-                alt="Logo"
-                width="auto"
-              />
+              <img className="h-30 w-36" src={logo} alt="Logo" />
             </a>
             <div className="xl:hidden ml-auto">
               <button

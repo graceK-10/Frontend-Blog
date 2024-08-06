@@ -11,7 +11,9 @@ const formatContent = (content) => {
 
 const fetchBlogDetails = async (id) => {
   try {
-    const response = await axios.get(`http://localhost:5000/posts/${id}`);
+    const response = await axios.get(
+      `https://backend-blog-1-n6vo.onrender.com/posts/${id}`
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching blog details:", error);
@@ -45,7 +47,7 @@ function Detailedblog() {
     if (newComment.trim()) {
       try {
         const response = await axios.post(
-          `http://localhost:5000/posts/${id}/comments`,
+          `https://backend-blog-1-n6vo.onrender.com/posts/${id}/comments`,
           { text: newComment }
         );
         setComments([...comments, response.data]);
