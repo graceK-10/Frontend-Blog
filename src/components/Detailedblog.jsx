@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import LoadingPage from "./LoadingPage";
 
 // Utility function to remove asterisks and format content
 const formatContent = (content) => {
@@ -27,6 +28,7 @@ function Detailedblog() {
   const [blogDetails, setBlogDetails] = useState(null);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
+  const [loading, setLoading] = useState(false); // New loading state
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,11 +61,18 @@ function Detailedblog() {
   };
 
   const handleBackClick = () => {
-    navigate("/");
+    setLoading(true); // Set loading state to true
+    setTimeout(() => {
+      navigate("/"); // Navigate after a short delay to show loading screen
+    }, 500); // Adjust the delay as needed
   };
 
+  if (loading) {
+    return <LoadingPage />;
+  }
+
   if (!blogDetails) {
-    return <div>Loading...</div>;
+    return <LoadingPage />;
   }
 
   return (

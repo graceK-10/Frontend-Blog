@@ -16,6 +16,9 @@ export default {
       boxShadow: {
         'header-bottom': '0 4px 10px -2px #FFB0B0', // Custom shadow
       },
+      fontFamily: {
+        'custom': ['Roboto', 'sans-serif'], // Custom font family
+      },
     },
   },
   plugins: [],

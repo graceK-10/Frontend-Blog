@@ -57,7 +57,7 @@ const Main = () => {
                       src={posts[0].imageUrl}
                       alt=""
                     />
-                    <span className="block text-gray-500 mb-5">
+                    <span className="block text-gray-600 mb-5">
                       {posts[0].date}
                     </span>
                     <h4 className="text-3xl font-semibold text-gray-900 group-hover:text-orange-900 mb-5">
