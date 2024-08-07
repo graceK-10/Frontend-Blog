@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-//Utility function to trucate content to two sentences
+// Utility function to truncate content to approximately 20 words
 const truncateContent = (content) => {
-  const sentences = content.split(". ");
-  if (sentences.length <= 2) {
+  const words = content.split(" ");
+  if (words.length <= 20) {
     return content;
   }
-  return sentences.slice(0, 2).join(". ") + ".";
+  return words.slice(0, 20).join(" ") + "..."; // Adding ellipsis to indicate truncation
 };
 
 const Main = () => {
