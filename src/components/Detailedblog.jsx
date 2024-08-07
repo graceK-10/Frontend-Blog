@@ -67,7 +67,7 @@ function Detailedblog() {
   }
 
   return (
-    <section className="overflow-hidden py-24">
+    <section className="bg-hero-pattern bg-cover bg-center overflow-hidden py-24">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-6">
           <button
