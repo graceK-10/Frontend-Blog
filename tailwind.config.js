@@ -9,10 +9,9 @@ export default {
       backgroundColor: {
         'header-pattern': '#FFECEC', 
       },
-      backgroundImage: {
-        'hero-pattern': "url('src/assets/3.png')", 
-        // 'header-pattern': "url('src/assets/3_1.png')",
-      },
+      // backgroundImage: {
+      //   'hero-pattern': "url('src/assets/3.png')", 
+      // },
       boxShadow: {
         'header-bottom': '0 4px 10px -2px #FFB0B0', // Custom shadow
       },
