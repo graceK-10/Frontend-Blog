@@ -97,10 +97,10 @@ const Header = () => {
           onClick={() => setMobileNavOpen(false)}
           className="fixed inset-0 bg-gray-800 opacity-25"
         ></div>
-        <nav className="relative flex flex-col py-6 px-10 w-full h-full bg-orange-50 border-r overflow-y-auto">
+        <nav className="relative flex flex-col py-6 px-10 w-full h-full bg-header-pattern border-r overflow-y-auto">
           <div className="flex items-center mb-16">
             <a className="mr-auto text-2xl font-medium leading-none" href="/">
-              <img className="h-10" src={logo} alt="Logo" width="auto" />
+              <img className="h-30 w-36" src={logo} alt="Logo" width="auto" />
             </a>
             <button onClick={() => setMobileNavOpen(false)}>
               <svg
