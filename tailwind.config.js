@@ -8,9 +8,10 @@ export default {
     extend: {
       backgroundColor: {
         'header-pattern': '#FFECEC', 
+        'custom-bg-color': '#FFB0B0',
       },
-      // backgroundImage: {
-      //   'hero-pattern': "url('src/assets/3.png')", 
+      backgroundImage: {
+        'hero-pattern': "url('src/assets/3.png')", 
       // },
       boxShadow: {
         'header-bottom': '0 4px 10px -2px #FFB0B0', // Custom shadow
